@@ -33,6 +33,7 @@ let package = Package(
             sources: [
                 "Classes/Core/ActivityIndicator.swift",
                 "Classes/Core/FullScreenSlideshowViewController.swift",
+                "Classes/Core/FullScreenSlideshowViewControllerDelegate.swift",
                 "Classes/Core/ImageSlideshow.swift",
                 "Classes/Core/ImageSlideshowItem.swift",
                 "Classes/Core/InputSource.swift",

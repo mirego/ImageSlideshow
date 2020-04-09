@@ -25,8 +25,8 @@ open class FullScreenSlideshowViewController: UIViewController {
     /// Close button 
     open var closeButton = UIButton()
 
-    /// Close button frame
-    open var closeButtonFrame: CGRect?
+    /// Delete button
+    open var deleteButton = UIButton()
 
     /// Closure called on page selection
     open var pageSelected: ((_ page: Int) -> Void)?
@@ -46,6 +46,9 @@ open class FullScreenSlideshowViewController: UIViewController {
             slideshow.zoomEnabled = zoomEnabled
         }
     }
+
+    /// Delegate
+    open weak var delegate: FullScreenSlideshowViewControllerDelegate?
 
     fileprivate var isInit = true
 
@@ -71,10 +74,16 @@ open class FullScreenSlideshowViewController: UIViewController {
 
         view.addSubview(slideshow)
 
-        // close button configuration
-        closeButton.setImage(UIImage(named: "ic_cross_white", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControlState())
+        closeButton.setImage(UIImage(named: "ic_close"), for: UIControlState())
+        closeButton.sizeToFit()
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControlEvents.touchUpInside)
         view.addSubview(closeButton)
+
+        deleteButton.setImage(UIImage(named: "ic_delete"), for: UIControlState())
+        deleteButton.sizeToFit()
+        deleteButton.tintColor = .white
+        deleteButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.deleteCurrentPhoto), for: .touchUpInside)
+        view.addSubview(deleteButton)
     }
 
     override open var prefersStatusBarHidden: Bool {
@@ -105,7 +114,10 @@ open class FullScreenSlideshowViewController: UIViewController {
                 safeAreaInsets = UIEdgeInsets.zero
             }
             
-            closeButton.frame = closeButtonFrame ?? CGRect(x: max(10, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: 40, height: 40)
+            closeButton.frame = CGRect(x: max(24, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: closeButton.frame.width, height: closeButton.frame.height)
+
+            let deleteButtonCenterX =  view.frame.width - closeButton.center.x
+            deleteButton.center = CGPoint(x: deleteButtonCenterX, y: closeButton.center.y)
         }
 
         slideshow.frame = view.frame
@@ -118,5 +130,10 @@ open class FullScreenSlideshowViewController: UIViewController {
         }
 
         dismiss(animated: true, completion: nil)
+    }
+
+    @objc func deleteCurrentPhoto() {
+        delegate?.fullScreenSlideshowViewControllerDidTapDeletePhoto(self, photoIndex: slideshow.currentPage)
+        dismiss(animated: true)
     }
 }
