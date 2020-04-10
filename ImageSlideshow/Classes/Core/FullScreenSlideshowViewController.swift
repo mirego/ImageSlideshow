@@ -74,12 +74,12 @@ open class FullScreenSlideshowViewController: UIViewController {
 
         view.addSubview(slideshow)
 
-        closeButton.setImage(UIImage(named: "ic_close"), for: UIControlState())
+        closeButton.setImage(UIImage(named: "ic_close", in: Bundle(for: type(of: self)), compatibleWith: nil), for: UIControlState())
         closeButton.sizeToFit()
         closeButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.close), for: UIControlEvents.touchUpInside)
         view.addSubview(closeButton)
 
-        deleteButton.setImage(UIImage(named: "ic_delete"), for: UIControlState())
+        deleteButton.setImage(UIImage(named: "ic_delete", in: Bundle(for: type(of: self)), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: UIControlState())
         deleteButton.sizeToFit()
         deleteButton.tintColor = .white
         deleteButton.addTarget(self, action: #selector(FullScreenSlideshowViewController.deleteCurrentPhoto), for: .touchUpInside)

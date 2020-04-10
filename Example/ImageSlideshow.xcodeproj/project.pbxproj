@@ -14,6 +14,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BE00F2EE2440D80B000FD275 /* ic_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE00F2EA2440D80B000FD275 /* ic_delete@3x.png */; };
+		BE00F2EF2440D80B000FD275 /* ic_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE00F2EB2440D80B000FD275 /* ic_close@2x.png */; };
+		BE00F2F02440D80B000FD275 /* ic_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE00F2EC2440D80B000FD275 /* ic_close@3x.png */; };
+		BE00F2F12440D80B000FD275 /* ic_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE00F2ED2440D80B000FD275 /* ic_delete@2x.png */; };
 		BE5BC95F243FBCA500923754 /* FullScreenSlideshowViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC95E243FBCA500923754 /* FullScreenSlideshowViewControllerDelegate.swift */; };
 		D007954F2043262C0053E25F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007954E2043262C0053E25F /* TableViewController.swift */; };
 		D0083DCE1EB739E700126B21 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0083DCD1EB739E700126B21 /* ActivityIndicator.swift */; };
@@ -58,6 +62,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		749E212B852A3FE6757C1D36 /* ImageSlideshow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ImageSlideshow.podspec; path = ../ImageSlideshow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8AA07A6EDAC622F1407E6C80 /* Pods_ImageSlideshow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSlideshow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE00F2EA2440D80B000FD275 /* ic_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_delete@3x.png"; path = "../../../ImageSlideshow/Assets/ic_delete@3x.png"; sourceTree = "<group>"; };
+		BE00F2EB2440D80B000FD275 /* ic_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_close@2x.png"; path = "../../../ImageSlideshow/Assets/ic_close@2x.png"; sourceTree = "<group>"; };
+		BE00F2EC2440D80B000FD275 /* ic_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_close@3x.png"; path = "../../../ImageSlideshow/Assets/ic_close@3x.png"; sourceTree = "<group>"; };
+		BE00F2ED2440D80B000FD275 /* ic_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_delete@2x.png"; path = "../../../ImageSlideshow/Assets/ic_delete@2x.png"; sourceTree = "<group>"; };
 		BE5BC95E243FBCA500923754 /* FullScreenSlideshowViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullScreenSlideshowViewControllerDelegate.swift; path = ../../ImageSlideshow/Classes/Core/FullScreenSlideshowViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D007954E2043262C0053E25F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D0083DCD1EB739E700126B21 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = ../../ImageSlideshow/Classes/Core/ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -196,6 +204,10 @@
 		D00C7A2420B4C05C00E5725B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE00F2EB2440D80B000FD275 /* ic_close@2x.png */,
+				BE00F2EC2440D80B000FD275 /* ic_close@3x.png */,
+				BE00F2ED2440D80B000FD275 /* ic_delete@2x.png */,
+				BE00F2EA2440D80B000FD275 /* ic_delete@3x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -364,6 +376,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE00F2EE2440D80B000FD275 /* ic_delete@3x.png in Resources */,
+				BE00F2F02440D80B000FD275 /* ic_close@3x.png in Resources */,
+				BE00F2EF2440D80B000FD275 /* ic_close@2x.png in Resources */,
+				BE00F2F12440D80B000FD275 /* ic_delete@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
