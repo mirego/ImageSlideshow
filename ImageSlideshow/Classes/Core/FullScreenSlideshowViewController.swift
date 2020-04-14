@@ -115,10 +115,10 @@ open class FullScreenSlideshowViewController: UIViewController {
                 safeAreaInsets = UIEdgeInsets.zero
             }
             
-            closeButton.frame = CGRect(x: max(24, safeAreaInsets.left), y: max(10, safeAreaInsets.top), width: closeButton.frame.width, height: closeButton.frame.height)
+            closeButton.frame = CGRect(x: max(24, safeAreaInsets.left), y: max(24, safeAreaInsets.top), width: closeButton.frame.width, height: closeButton.frame.height)
 
-            let deleteButtonCenterX =  view.frame.width - closeButton.center.x
-            deleteButton.center = CGPoint(x: deleteButtonCenterX, y: closeButton.center.y)
+            let deleteButtonMinX =  view.frame.width - closeButton.frame.minX - deleteButton.frame.width
+            deleteButton.frame = CGRect(x: deleteButtonMinX, y: closeButton.frame.minY, width: deleteButton.frame.width, height: deleteButton.frame.height)
         }
 
         slideshow.frame = view.frame
