@@ -33,6 +33,7 @@ let package = Package(
             sources: [
                 "Classes/Core/ActivityIndicator.swift",
                 "Classes/Core/FullScreenSlideshowViewController.swift",
+                "Classes/Core/FullScreenSlideshowViewControllerDelegate.swift",
                 "Classes/Core/ImageSlideshow.swift",
                 "Classes/Core/ImageSlideshowItem.swift",
                 "Classes/Core/InputSource.swift",
@@ -42,8 +43,10 @@ let package = Package(
                 "Classes/Core/UIImage+AspectFit.swift",
                 "Classes/Core/UIImageView+Tools.swift",
                 "Classes/Core/ZoomAnimatedTransitioning.swift",
-                "Assets/ic_cross_white@2x.png",
-                "Assets/ic_cross_white@3x.png",
+                "Assets/ic_back@2x.png",
+                "Assets/ic_back@3x.png",
+                "Assets/ic_delete@2x.png",
+                "Assets/ic_delete@3x.png",
             ]),
         .target(
             name: "ImageSlideshowAlamofire",

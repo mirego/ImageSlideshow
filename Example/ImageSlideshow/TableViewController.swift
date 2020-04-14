@@ -47,6 +47,7 @@ class TableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
         let fullScreenController = FullScreenSlideshowViewController()
+        fullScreenController.delegate = self
         fullScreenController.inputs = models.map { $0.inputSource }
         fullScreenController.initialPage = indexPath.row
 
@@ -62,5 +63,11 @@ class TableViewController: UITableViewController {
         }
 
         present(fullScreenController, animated: true, completion: nil)
+    }
+}
+
+extension TableViewController: FullScreenSlideshowViewControllerDelegate {
+    func fullScreenSlideshowViewControllerDidTapDeletePhoto(_ fullScreenSlideshowViewController: FullScreenSlideshowViewController, photoIndex: Int) {
+        print("Did tap delete for photo at index : \(photoIndex)")
     }
 }
